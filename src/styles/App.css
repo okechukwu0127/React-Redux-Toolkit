@@ -3,8 +3,11 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
+}
+td,th {
+  font-size: 19px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -12,6 +15,7 @@
     animation: App-logo-float infinite 3s ease-in-out;
   }
 }
+
 
 .App-header {
   min-height: 100vh;
