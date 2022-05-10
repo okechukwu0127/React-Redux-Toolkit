@@ -15,3 +15,6 @@ Start by running `npm install`<br/>
 To start the Json-Server run the command `json-server --watch db.json --port 4000` <br/>
 This fires up your json-server at  [http://localhost:4000](http://localhost:4000)
 
+## `Screen Demo`
+With all things been equal, you should have your application running like the image we are having below
+![Demo](./public/demo.png)
