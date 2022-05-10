@@ -9,6 +9,7 @@ export const newsApi = createApi({
     news: builder.query<News[], void>({
       query: () => "/news",
       providesTags: ["News"],
+      transformResponse: (res:any) => res.sort((a:any, b:any) => b.id - a.id),
     }),
     //OUTPUT,INPUT
     singleNews: builder.query<News, number>({
@@ -43,4 +44,10 @@ export const newsApi = createApi({
   }),
 });
 
-export const { useNewsQuery,useSingleNewsQuery, useDeleteNewsMutation, useUpdateNewsMutation,useAddNewsMutation } = newsApi;
+export const {
+  useNewsQuery,
+  useSingleNewsQuery,
+  useDeleteNewsMutation,
+  useUpdateNewsMutation,
+  useAddNewsMutation,
+} = newsApi;

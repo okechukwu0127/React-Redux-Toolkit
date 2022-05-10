@@ -49,6 +49,12 @@
       "title": "News Article 5",
       "description": "Description 5",
       "category": "AI"
+    },
+    {
+      "id": 6,
+      "title": "News Article 6",
+      "description": "Description 6",
+      "category": "animals"
     }
   ],
   "dashboard": {

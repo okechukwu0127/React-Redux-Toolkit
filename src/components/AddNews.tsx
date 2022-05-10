@@ -3,7 +3,7 @@ import { useAddNewsMutation, useNewsQuery } from "../services/newsApi";
 import { News } from "../model/news.model";
 
 const AddNews = ({ news }: { news: News[] }) => {
-  const [addNews] = useAddNewsMutation();
+  const [addNews, { isLoading }] = useAddNewsMutation();
   //const { refetch } = useNewsQuery();
 
   const category = [
@@ -29,7 +29,14 @@ const AddNews = ({ news }: { news: News[] }) => {
       category: category[randomIndex],
     };
     //console.log(newData);
-    await addNews(newData);
+    if (!isLoading) {
+      try {
+        await addNews(newData).unwrap();
+      } catch (e) {
+        console.log("error = ", e);
+      }
+    }
+
     //refetch()
   };
 
